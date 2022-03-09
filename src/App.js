@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App">
       <div className='container'> 
-      <Dictionary/>
+      <Dictionary defaultWord="animals"/>
       <footer>
         <small>
           Dictionary app was built by Elina Kostiainen and is {""}

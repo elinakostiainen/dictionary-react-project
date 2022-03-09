@@ -3,21 +3,25 @@ import axios from "axios"
 import Results from "./Results"
 import "./Dictionary.css"
 
-export default function Dictionary(){
-let [searchWord, setSearchWord] = useState("");
+export default function Dictionary(props){
+let [searchWord, setSearchWord] = useState(props.defaultWord);
 let [results, setResults] = useState(null);
+let [loaded, setLoaded] = useState (false);
 
 function handleResponse(response){
     setResults(response.data[0]);
 }
 
-function search(event){
-    event.preventDefault();
-
+function search(){
 // documentation url = https://dictionaryapi.dev/
-    let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`
+let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`
 
-    axios.get(apiUrl).then(handleResponse)
+axios.get(apiUrl).then(handleResponse)
+}
+
+function handleSubmit(event){
+    event.preventDefault();
+    search();
 }
 
 function handleSearchWordChange(event){
@@ -25,12 +29,26 @@ function handleSearchWordChange(event){
     setSearchWord(event.target.value);
 }
 
+function load (){
+    setLoaded(true);
+    search();
+}
+
+if (loaded)
+{
     return(
         <div className="Dictionary">
-            <form onSubmit={search}>
-                <input type="search" placeholder="Search for a word" autoFocus={true} onChange={handleSearchWordChange}/>
+            <h1>Welcome to the Dictionary</h1>
+            <h2>What word do you want to look up?</h2>
+            <form onSubmit={handleSubmit}>
+                <input type="search" placeholder="Search for a word" autoFocus={true} onChange={handleSearchWordChange} defaultValue={props.defaultWord}/>
+                <button>Search</button>
             </form>
             <Results results={results}/>
         </div>
     )
+} else {
+load();
+return "loading..."
+}
 }

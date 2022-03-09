@@ -9,4 +9,11 @@
 
 .App a {
   text-decoration: none;
+  color: black;
+  transition: all 200ms ease-in-out;
+  
+}
+
+.App a:hover {
+  color: #8dc6ff;
 }

@@ -1,3 +1,53 @@
+body {
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 90%);
+}
+
 .Dictionary form {
     margin-bottom: 40px;
+}
+
+.Dictionary section {
+    background: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.Dictionary h1, h2 {
+    margin-bottom: 26px;
+}
+
+.Dictionary h2 {
+    font-size: 24px;
+}
+
+.Dictionary a {
+    color: #8dc6ff;
+    transition: all 200ms ease-in-out;
+}
+
+.Dictionary a:hover {
+    color: #cadefc;
+    cursor: pointer;
+}
+
+.Dictionary input {
+    color:#8dc6ff;
+    border: 2px solid white;
+    padding: 8px 18px;
+    border-radius: 10px;
+}
+
+.Dictionary button {
+    background: white;
+    color: #8dc6ff;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 8px 20px;
+    margin-left: 20px;
+    transition: all 200ms ease-in-out;
+}
+
+.Dictionary button:hover {
+    color: #cadefc;
 }
