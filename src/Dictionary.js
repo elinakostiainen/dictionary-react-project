@@ -42,7 +42,6 @@ if (loaded)
             <h2>What word do you want to look up?</h2>
             <form onSubmit={handleSubmit}>
                 <input type="search" placeholder="Search for a word" autoFocus={true} onChange={handleSearchWordChange} defaultValue={props.defaultWord}/>
-                <button>Search</button>
             </form>
             <Results results={results}/>
         </div>

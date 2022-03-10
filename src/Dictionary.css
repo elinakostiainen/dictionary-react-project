@@ -37,17 +37,3 @@ body {
     padding: 8px 18px;
     border-radius: 10px;
 }
-
-.Dictionary button {
-    background: white;
-    color: #8dc6ff;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 8px 20px;
-    margin-left: 20px;
-    transition: all 200ms ease-in-out;
-}
-
-.Dictionary button:hover {
-    color: #cadefc;
-}
