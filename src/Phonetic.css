@@ -1,6 +1,5 @@
-.Phonetic a {
-    border-radius: 20px;
-    padding: 10px 20px;
+.Phonetic {
+    height: 50px;
 }
 
 .audio {
@@ -9,4 +8,10 @@
 
 .Phonetic .text {
     text-align: center;
+}
+
+@media (max-width = 576px){
+    .audio {
+        width: 100px;
+    }
 }
