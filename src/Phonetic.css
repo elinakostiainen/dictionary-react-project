@@ -4,14 +4,9 @@
 
 .audio {
     margin-bottom: 6px;
+    width: 100%;
 }
 
 .Phonetic .text {
     text-align: center;
-}
-
-@media (max-width = 576px){
-    .audio {
-        width: 100px;
-    }
 }
