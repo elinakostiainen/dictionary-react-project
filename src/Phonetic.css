@@ -1,12 +1,17 @@
-.Phonetic {
-    height: 50px;
-}
-
 .audio {
-    margin-bottom: 6px;
     width: 100%;
 }
 
 .Phonetic .text {
     text-align: center;
+}
+
+audio {
+    max-width: 100%;
+}
+
+@media (max-width:576px){
+    audio {
+    max-width: 80%;
+    }
 }
