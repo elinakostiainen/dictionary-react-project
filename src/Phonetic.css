@@ -8,10 +8,5 @@
 
 audio {
     max-width: 100%;
-}
-
-@media (max-width:576px){
-    audio {
-    max-width: 80%;
-    }
+    display:inline-block;
 }
