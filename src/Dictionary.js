@@ -25,7 +25,7 @@ let apiUrl= `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`
 axios.get(apiUrl).then(handleDictionResponse)
 
 let pexelsApiKey = "563492ad6f91700001000001c4ffd81850b842229731236912883380";
-let headers = {Authorization: `Beaner ${pexelsApiKey}`}
+let headers = {Authorization: `Bearer ${pexelsApiKey}`};
 let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${searchWord}&per_page=12`
 
 axios.get(pexelsApiUrl, {headers: headers}).then(handlePexelsResponse);
